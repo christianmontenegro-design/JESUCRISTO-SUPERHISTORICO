@@ -315,6 +315,15 @@ dialog p{font-size:11px;color:var(--muted);margin:12px 4px 0}
 .footer-brands{display:flex;gap:25px;align-items:center;flex-wrap:wrap;justify-content:center}
 .footer-brands .producer-logo{width:135px;max-height:65px}
 @media(max-width:600px){.brand-pair{gap:12px}.producer-logo,.brand-pair .company-logo{width:115px}.header-inner{gap:10px}.brand-label{font-size:8px}.edition{max-width:115px}}
+
+/* Ambientación sonora */
+.sound-player{position:fixed;right:18px;bottom:18px;z-index:45;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:calc(100vw - 36px);padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:rgba(5,9,18,.96);box-shadow:0 8px 30px #0006;color:var(--ink)}
+.sound-player button{border:1px solid var(--gold);border-radius:4px;background:transparent;color:var(--gold);padding:7px 11px;font-size:11px;font-weight:600}
+.sound-player label{font-size:10px;color:var(--muted)}
+.sound-player input{width:85px;accent-color:var(--gold);vertical-align:middle}
+.sound-status{font-size:10px;color:var(--muted);max-width:180px}
+footer{padding-bottom:110px}
+@media(max-width:600px){.sound-player{right:10px;bottom:10px;gap:9px;padding:10px;max-width:calc(100vw - 20px)}.sound-status{max-width:125px;font-size:9px}.sound-player input{width:65px}footer{padding-bottom:145px}}
 </style>
 </head>
 
@@ -807,5 +816,68 @@ dialog.addEventListener("click",event => {
 
 render();
 </script>
+
+<audio id="ambient-audio" src="./PAGINA%20LOOP.mp3" loop autoplay preload="auto"></audio>
+<div class="sound-player" role="group" aria-label="Música de ambientación">
+  <button id="sound-toggle" type="button" aria-controls="ambient-audio" aria-label="Reproducir música">Activar música</button>
+  <label for="sound-volume">Volumen <input id="sound-volume" type="range" min="0" max="100" value="25" aria-label="Volumen de la música"></label>
+  <span class="sound-status" id="sound-status" role="status" aria-live="polite">Preparando música…</span>
+</div>
+<script>
+(() => {
+  const audio = document.getElementById("ambient-audio");
+  const toggle = document.getElementById("sound-toggle");
+  const volume = document.getElementById("sound-volume");
+  const status = document.getElementById("sound-status");
+  let pending = false;
+  audio.volume = 0.25;
+
+  function update() {
+    const playing = !audio.paused;
+    toggle.textContent = playing ? "Pausar música" : "Activar música";
+    toggle.setAttribute("aria-label",playing ? "Pausar música" : "Reproducir música");
+    if(playing) status.textContent = "Ambientación · en repetición";
+  }
+  async function play() {
+    if(pending) return;
+    pending = true;
+    try {
+      await audio.play();
+      update();
+    } catch(error) {
+      update();
+      status.textContent = error.name === "NotAllowedError"
+        ? "Pulsa para entrar con música"
+        : "Audio no disponible todavía";
+    } finally { pending = false; }
+  }
+  toggle.addEventListener("click",() => {
+    if(audio.paused) {
+      if(audio.error) audio.load();
+      play();
+    } else {
+      audio.pause();
+      status.textContent = "Música en pausa";
+      update();
+    }
+  });
+  volume.addEventListener("input",() => {
+    audio.volume = Number(volume.value)/100;
+    if(audio.muted) audio.muted = false;
+  });
+  audio.addEventListener("play",update);
+  audio.addEventListener("pause",update);
+  audio.addEventListener("error",() => {
+    status.textContent = "Audio no disponible todavía";
+    update();
+  });
+  audio.addEventListener("waiting",() => {
+    if(!audio.paused) status.textContent = "Cargando música…";
+  });
+  audio.addEventListener("playing",update);
+  play();
+})();
+</script>
+
 </body>
 </html>
