@@ -33,7 +33,7 @@ body{
 /* Fondo de toda la web, independiente del largo del contenido. */
 .site-background{
   position:fixed;inset:0;z-index:-2;
-  background:#080c15 url("./FONDO-WEB.png") center center/cover no-repeat;
+  background:#080c15 url("./FONDO_WEB.png") center center/cover no-repeat;
   pointer-events:none;
 }
 .site-shade{
@@ -729,7 +729,7 @@ dialog p{font-size:11px;color:var(--muted);margin:12px 4px 0}
 <dialog id="background-dialog" aria-label="Composición visual completa">
   <button class="dialog-close" id="close-background"
     type="button" aria-label="Cerrar imagen">×</button>
-  <img src="./FONDO-WEB.png" loading="lazy"
+  <img src="./FONDO_WEB.png" loading="lazy"
     alt="Composición conceptual con estructuras escénicas, pantallas,
     guitarra, bandera chilena y corona de espinas">
   <p>Imagen conceptual de identidad visual del proyecto.</p>
@@ -818,7 +818,7 @@ document.getElementById("open-background").addEventListener("click",() => {
   if(typeof dialog.showModal === "function"){
     dialog.showModal();
   }else{
-    window.open("./FONDO-WEB.png","_blank","noopener");
+ window.open("./FONDO_WEB.png","_blank","noopener");
   }
 });
 document.getElementById("close-background")
