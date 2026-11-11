@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101013">
+<meta name="description" content="Jesucristo Superhistórico. Montaje chileno 2027 de Compañía Mastroluz. Dossier artístico y comercial.">
+<title>Jesucristo Superhistórico | Dossier 2027</title>
+<style>
+:root{--bg:#101013;--panel:#19191e;--ink:#f4eee6;--muted:#b9b3ac;--gold:#dfb875;--line:#ffffff20}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+a{color:inherit}
+button{font:inherit}
+.wrap{width:min(1120px,90%);margin:auto}
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:14px;letter-spacing:.2em;font-weight:bold}
+.brand small{display:block;font-size:10px;font-weight:normal;letter-spacing:.12em;color:var(--muted)}
+.edition{color:var(--gold);font-size:12px;letter-spacing:.15em}
+nav{position:sticky;top:0;z-index:10;background:#101013f5;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:13px 0}
+.tab{white-space:nowrap;cursor:pointer;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:30px;padding:10px 18px}
+.tab[aria-selected="true"]{color:var(--bg);background:var(--gold)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 82% 25%,#8d372b35,transparent 50%),radial-gradient(ellipse at 12% 75%,#cba96716,transparent 60%)}
+.hero:before{content:"";position:absolute;right:15%;top:-20%;height:150%;width:1px;background:#dfb87535;transform:rotate(25deg);box-shadow:80px 0 #dfb87515,160px 0 #dfb87510;pointer-events:none}
+.hero-content{position:relative;padding:85px 0;max-width:900px}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+h1{font-size:clamp(42px,7.6vw,96px);line-height:1.02;letter-spacing:-.045em;margin:0 0 28px;text-transform:uppercase;overflow-wrap:anywhere}
+h1 span{display:block;color:var(--gold)}
+.lead{font-size:clamp(19px,2.4vw,27px);max-width:700px;line-height:1.5}
+.muted{color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;text-decoration:none;border:1px solid var(--gold);border-radius:4px;color:var(--gold);background:transparent;cursor:pointer}
+.btn.primary{background:var(--gold);color:var(--bg);font-weight:bold}
+section.content{padding:70px 0}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.15;letter-spacing:-.025em;margin:0 0 24px}
+h3{font-size:22px;line-height:1.3;margin:0 0 14px}
+p{margin:0 0 20px}
+.intro{max-width:760px;font-size:19px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.card{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.num{color:var(--gold);font-size:12px;letter-spacing:.14em;display:block;margin-bottom:22px}
+.card p{color:var(--muted);margin-bottom:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;margin:45px 0}
+.art-space{min-height:290px;border:1px dashed #dfb87555;border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;padding:35px;background:linear-gradient(135deg,#dfb87509,transparent)}
+.art-space span{display:block;color:var(--gold);font-size:17px}
+.art-space small{display:block;max-width:280px;margin:12px auto 0;color:var(--muted)}
+.note{border-left:2px solid var(--gold);padding:14px 20px;background:#dfb87509;color:var(--muted);font-size:14px;margin-top:28px}
+.tag{display:inline-block;color:var(--gold);border:1px solid #dfb87555;font-size:11px;letter-spacing:.08em;padding:5px 10px;border-radius:20px;margin-bottom:18px}
+.featured{border-color:#dfb87580}
+dl{margin:30px 0}
+dl div{display:grid;grid-template-columns:1fr 1.6fr;gap:24px;border-bottom:1px solid var(--line);padding:18px 0}
+dt{color:var(--muted)}
+dd{margin:0}
+footer{padding:30px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:760px){.grid,.split{grid-template-columns:1fr}.hero{min-height:540px}.hero-content{padding:65px 0}.edition{font-size:10px}.card{padding:24px}section.content{padding:45px 0}dl div{grid-template-columns:1fr;gap:5px}.tab{padding:9px 13px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap header-inner">
+<div class="brand">MASTROLUZ<small>Compañía de Artes Integrales</small></div>
+<div class="edition">DOSSIER · CHILE 2027</div>
+</div>
+</header>
+
+<nav aria-label="Secciones del dossier">
+<div class="wrap tabs" role="tablist">
+<button class="tab" id="tab-show" role="tab" aria-selected="true" aria-controls="show" data-page="show">El espectáculo</button>
+<button class="tab" id="tab-elenco" role="tab" aria-selected="false" aria-controls="elenco" data-page="elenco" tabindex="-1">Elenco y dirección</button>
+<button class="tab" id="tab-disenos" role="tab" aria-selected="false" aria-controls="disenos" data-page="disenos" tabindex="-1">Universo visual</button>
+<button class="tab" id="tab-formatos" role="tab" aria-selected="false" aria-controls="formatos" data-page="formatos" tabindex="-1">Formatos</button>
+<button class="tab" id="tab-tecnica" role="tab" aria-selected="false" aria-controls="tecnica" data-page="tecnica" tabindex="-1">Ficha técnica</button>
+<button class="tab" id="tab-contacto" role="tab" aria-selected="false" aria-controls="contacto" data-page="contacto" tabindex="-1">Contratación</button>
+</div>
+</nav>
+
+<main>
+<div id="show" role="tabpanel" aria-labelledby="tab-show">
+<div class="hero">
+<div class="wrap">
+<div class="hero-content">
+<div class="kicker">Una propuesta escénica de Compañía Mastroluz</div>
+<h1>Jesucristo<span>Superhistórico</span></h1>
+<p class="lead">El poder de una historia. La fuerza del rock. Una mirada desde nuestro tiempo.</p>
+<p class="muted">Proyecto de montaje chileno 2027 · Dirección de Christian Montenegro.</p>
+<div class="actions">
+<a class="btn primary" href="#contacto">Consultar contratación</a>
+<a class="btn" href="#disenos">Explorar la propuesta visual</a>
+</div>
+</div>
+</div>
+</div>
+<section class="content wrap">
+<div class="kicker">La propuesta</div>
+<h2>Una historia que vuelve a interpelarnos.</h2>
+<div class="intro">
+<p>Jesucristo Superhistórico propone una experiencia de teatro musical que reúne interpretación, música en vivo, danza y un universo visual contemporáneo.</p>
+<p>En un mundo atravesado por las pantallas, la popularidad y la construcción de imágenes públicas, el montaje explora las tensiones entre el mensaje y el espectáculo, la convicción y el poder.</p>
+</div>
+<div class="grid">
+<article class="card"><span class="num">01 · INTERPRETACIÓN</span><h3>El conflicto humano</h3><p>Una propuesta centrada en los vínculos, los deseos y los temores que movilizan a sus personajes.</p></article>
+<article class="card"><span class="num">02 · MÚSICA</span><h3>La energía del vivo</h3><p>El proyecto integra voces y músicos en vivo como parte esencial de su experiencia escénica.</p></article>
+<article class="card"><span class="num">03 · IDENTIDAD</span><h3>Una mirada contemporánea</h3><p>Escenografía, vestuario y lenguaje audiovisual al servicio de una lectura conectada con nuestro tiempo.</p></article>
+</div>
+<div class="note">Montaje en desarrollo. Este dossier presenta la propuesta artística para conversaciones de contratación anticipada. Las imágenes de diseño que se incorporen corresponden a visualizaciones del proyecto.</div>
+</section>
+</div>
+
+<div id="elenco" role="tabpanel" aria-labelledby="tab-elenco" hidden>
+<section class="content wrap">
+<div class="kicker">El equipo artístico</div>
+<h2>Las personas que darán vida a la historia.</h2>
+<p class="intro">El proyecto reúne intérpretes con experiencia previa en sus respectivos personajes en otros montajes. Esta puesta propone un nuevo trabajo de interpretación y una identidad escénica propia.</p>
+<div class="split">
+<article>
+<span class="tag">DIRECCIÓN</span>
+<h3>Christian Montenegro</h3>
+<p>Actor y gestor cultural. A cargo de la dirección del montaje y de la articulación de su propuesta interpretativa y visual.</p>
+<p class="muted">La presentación completa del equipo artístico y musical se incorporará en la próxima actualización.</p>
+</article>
+<div class="art-space"><div><span>Retrato de dirección</span><small>Espacio reservado para fotografía oficial.</small></div></div>
+</div>
+<div class="note">Próxima incorporación: fotografías oficiales, nombres, personajes, reseñas y registros de interpretación del elenco.</div>
+</section>
+</div>
+
+<div id="disenos" role="tabpanel" aria-labelledby="tab-disenos" hidden>
+<section class="content wrap">
+<div class="kicker">Escenografía · Vestuario · Imagen</div>
+<h2>Un universo escénico con identidad propia.</h2>
+<p class="intro">La propuesta visual sitúa la historia en un entorno hipertecnologizado, donde el poder, la exposición pública y el consumo de imágenes atraviesan la acción.</p>
+<div class="split">
+<div><h3>El espacio escénico</h3><p>El diseño en desarrollo explora estructuras a distintos niveles, módulos transformables y una presencia audiovisual integrada a la narración.</p><p class="muted">Su configuración final se definirá junto con las condiciones de producción y del recinto.</p></div>
+<div class="art-space"><div><span>Diseño de escenario</span><small>Aquí incorporaremos la visualización seleccionada del proyecto.</small></div></div>
+</div>
+<div class="split">
+<div class="art-space"><div><span>Diseños de vestuario</span><small>Aquí incorporaremos los diseños de personajes y conjuntos.</small></div></div>
+<div><h3>El personaje también se viste</h3><p>El vestuario construye identidades y relaciones de poder. Cada personaje y conjunto responde a una intención dramática dentro de la propuesta contemporánea.</p></div>
+</div>
+<div class="note">Los diseños son propuestas artísticas en desarrollo y no representan fotografías de un montaje terminado.</div>
+</section>
+</div>
+
+<div id="formatos" role="tabpanel" aria-labelledby="tab-formatos" hidden>
+<section class="content wrap">
+<div class="kicker">Opciones de presentación</div>
+<h2>El espectáculo completo, en el centro.</h2>
+<p class="intro">La propuesta principal es el montaje teatral completo. Las alternativas se desarrollarán con alcances definidos para cada tipo de evento.</p>
+<div class="grid">
+<article class="card featured"><span class="tag">PROPUESTA PRINCIPAL</span><h3>Montaje completo</h3><p>La experiencia teatral concebida para integrar interpretación, música en vivo, coreografía, vestuario y escenografía.</p><div class="actions"><a class="btn" href="#contacto">Consultar propuesta</a></div></article>
+<article class="card"><span class="tag">EN DEFINICIÓN</span><h3>Formato concierto</h3><p>Alternativa de presentación con foco musical. Repertorio, duración, dotación y condiciones pendientes de confirmación.</p></article>
+<article class="card"><span class="tag">EN DEFINICIÓN</span><h3>Participación promocional</h3><p>Posibles intervenciones para eventos y presentaciones. Su disponibilidad y alcance deberán acordarse previamente.</p></article>
+</div>
+<div class="note">Duraciones, cantidades de participantes, valores e inclusiones se precisarán en cada propuesta comercial.</div>
+</section>
+</div>
+
+<div id="tecnica" role="tabpanel" aria-labelledby="tab-tecnica" hidden>
+<section class="content wrap">
+<div class="kicker">Coordinación de producción</div>
+<h2>Ficha técnica preliminar.</h2>
+<p class="intro">Los requerimientos definitivos están en desarrollo. La evaluación técnica se realizará según el formato solicitado y las características del recinto.</p>
+<dl>
+<div><dt>Escenario</dt><dd>Dimensiones, altura libre, accesos y capacidad de carga por definir.</dd></div>
+<div><dt>Sonido</dt><dd>Amplificación, microfonía y monitoreo por dimensionar con el equipo musical.</dd></div>
+<div><dt>Iluminación</dt><dd>Diseño y equipamiento pendientes de especificación.</dd></div>
+<div><dt>Audiovisual</dt><dd>Superficie de imagen y sistema de reproducción por coordinar.</dd></div>
+<div><dt>Escenografía</dt><dd>Configuración, transporte y montaje sujetos al diseño definitivo.</dd></div>
+<div><dt>Operación</dt><dd>Horarios de carga, montaje, pruebas, función y desmontaje por acordar.</dd></div>
+<div><dt>Camerinos y apoyo</dt><dd>Necesidades por precisar según la dotación del formato contratado.</dd></div>
+</dl>
+<div class="note">Esta sección no constituye un rider definitivo. La factibilidad de cada presentación requiere coordinación previa.</div>
+</section>
+</div>
+
+<div id="contacto" role="tabpanel" aria-labelledby="tab-contacto" hidden>
+<section class="content wrap">
+<div class="kicker">Empresas · Municipios · Teatros · Productoras</div>
+<h2>Conversemos sobre tu próximo evento.</h2>
+<p class="intro">Estamos desarrollando el montaje 2027 y abriendo conversaciones para su programación y contratación anticipada.</p>
+<div class="grid">
+<article class="card"><span class="num">01</span><h3>Cuéntanos tu idea</h3><p>Organización, ciudad, fecha tentativa, tipo de evento y público estimado.</p></article>
+<article class="card"><span class="num">02</span><h3>Evaluamos el alcance</h3><p>Revisamos formato, condiciones del recinto y necesidades de producción.</p></article>
+<article class="card"><span class="num">03</span><h3>Preparamos la propuesta</h3><p>Definimos inclusiones, condiciones, plazos y presupuesto para tu evento.</p></article>
+</div>
+<div class="note">Contacto comercial pendiente de incorporación. Próximamente se habilitarán los enlaces oficiales de correo y WhatsApp.</div>
+</section>
+</div>
+</main>
+
+<footer><div class="wrap">Compañía Mastroluz · Jesucristo Superhistórico · Dossier de proyecto 2027</div></footer>
+
+<script>
+const tabs=[...document.querySelectorAll('[data-page]')];
+const panels=[...document.querySelectorAll('[role="tabpanel"]')];
+function render(){
+const requested=location.hash.slice(1);
+const id=panels.some(p=>p.id===requested)?requested:'show';
+panels.forEach(p=>p.hidden=p.id!==id);
+tabs.forEach(t=>{
+const active=t.dataset.page===id;
+t.setAttribute('aria-selected',String(active));
+t.tabIndex=active?0:-1;
+});
+}
+tabs.forEach((tab,index)=>{
+tab.addEventListener('click',()=>{location.hash=tab.dataset.page});
+tab.addEventListener('keydown',event=>{
+let next;
+if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;
+if(event.key==='Home')next=0;
+if(event.key==='End')next=tabs.length-1;
+if(next!==undefined){
+event.preventDefault();
+tabs[next].focus();
+location.hash=tabs[next].dataset.page;
+}
+});
+});
+window.addEventListener('hashchange',()=>{
+render();
+window.scrollTo(0,0);
+});
+render();
+</script>
+</body>
+</html>
