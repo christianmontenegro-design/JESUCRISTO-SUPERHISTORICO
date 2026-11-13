@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -349,6 +349,82 @@ footer{padding-bottom:110px}
 .artistic-details-body p{font-size:14px}
 @media(max-width:600px){.trailer-hero{padding-top:30px}.trailer-opening p{font-size:18px}.trailer-opening p:last-child{font-size:15px}.trailer-authors{font-size:10px}.artistic-details-body .panel{padding:15px}.trailer-finale h2{font-size:23px}}
 
+
+/* Dirección visual: luz escénica, metal y tipografía de concierto */
+:root{--stage-type:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--gold:#e4bf7c;--line:rgba(228,191,124,.2)}
+.site-shade{background:linear-gradient(90deg,rgba(3,7,15,.25),rgba(3,7,15,.5) 32%,rgba(3,7,15,.5) 68%,rgba(3,7,15,.25))}
+header{background:linear-gradient(180deg,rgba(3,7,15,.94),rgba(3,7,15,.65));border-bottom:1px solid rgba(228,191,124,.18)}
+.header-inner{min-height:88px}
+.brand-label{letter-spacing:.24em;font-size:8px}
+.company-logo,.producer-logo,.footer-logo{filter:drop-shadow(0 3px 12px #0005);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.edition{font-size:9px;letter-spacing:.2em}
+nav{background:rgba(4,8,16,.83);border-bottom-color:rgba(228,191,124,.16);backdrop-filter:blur(12px)}
+.tabs{gap:20px;padding:0}
+.tab{position:relative;border:0;border-radius:0;padding:18px 9px;font-size:11px;font-weight:500;letter-spacing:.045em;color:#c2c9d4}
+.tab:hover{background:transparent;color:var(--light)}
+.tab[aria-selected="true"]{background:transparent;color:var(--light)}
+.tab[aria-selected="true"]::after{content:"";position:absolute;left:9px;right:9px;bottom:0;height:2px;background:linear-gradient(90deg,transparent,#edc982,transparent);box-shadow:0 -3px 14px #e4bf7860}
+.trailer-hero{min-height:auto;padding:52px 0 38px}
+.trailer-hero .hero-inner{max-width:1050px}
+.trailer-opening{position:relative;max-width:1000px;margin:0 auto 20px;padding:0 15px;text-shadow:0 2px 18px #000,0 0 45px #000}
+.trailer-opening::before{content:"";display:block;width:75px;height:1px;margin:0 auto 24px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.trailer-opening p{font-family:var(--stage-type);font-weight:500;letter-spacing:.045em;line-height:1.12;color:#f0eee7;text-wrap:balance}
+.trailer-opening p strong{font-weight:700}
+.trailer-opening .origin-line{font-size:clamp(16px,1.65vw,23px);letter-spacing:.085em;color:#c6ccd6;margin-bottom:14px}
+.trailer-opening .origin-line strong{color:var(--light)}
+.trailer-opening .history-line{font-size:clamp(27px,3.35vw,46px);margin:0 0 18px}
+.trailer-opening .history-line strong{color:var(--gold)}
+.trailer-opening .return-line{font-size:clamp(20px,2.25vw,30px);line-height:1.25;margin:0}
+.trailer-opening .return-line strong{font-weight:700;color:var(--light)}
+.trailer-hero .logo-stage{position:relative;max-width:720px;margin:12px auto 0}
+.trailer-hero .logo-stage::before{content:"";position:absolute;inset:15% 4%;background:radial-gradient(ellipse,#dba45d14,transparent 70%);pointer-events:none}
+.trailer-hero .show-logo{max-height:350px;filter:drop-shadow(0 12px 26px #0007);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);mask-composite:intersect;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 7%,#000 88%,transparent);-webkit-mask-composite:source-in}
+.trailer-authors{background:none;border:0;border-radius:0;font-size:10px;letter-spacing:.035em;margin:10px auto 24px;padding:0 15px;color:#d0d3da;text-shadow:0 2px 10px #000}
+.trailer-manifesto{font-family:var(--stage-type);font-weight:500;font-size:clamp(26px,3.1vw,42px);letter-spacing:.08em;line-height:1.2;color:var(--ink);margin-bottom:24px}
+.trailer-manifesto span{color:#d2d5dc}
+.trailer-manifesto strong{font-weight:700;color:var(--gold)}
+.btn{border-radius:0;border-color:rgba(228,191,124,.5);background:linear-gradient(110deg,#101a2ac9,#090f1bcc);letter-spacing:.05em;font-size:10px;padding:13px 22px;box-shadow:none}
+.btn.primary{background:linear-gradient(115deg,#eed5a2,#cea25c);border-color:#e4bf78;color:#17140f}
+.btn:hover{transform:translateY(-1px);background:#19263fe0}
+.btn.primary:hover{background:#f0d7a2}
+#show>.section{padding:20px 0}
+#show>.section:last-child{padding-bottom:85px}
+#show .trailer-purpose,#show .trailer-finale{position:relative;border:0;border-radius:0;box-shadow:none;background:linear-gradient(90deg,transparent,rgba(4,9,19,.88) 18%,rgba(4,9,19,.88) 82%,transparent);padding:55px 55px}
+#show .trailer-purpose::before,#show .trailer-finale::before{content:"";position:absolute;left:20%;right:20%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(228,191,124,.7),transparent)}
+.trailer-purpose p{max-width:740px;font-size:clamp(14px,1.35vw,17px);font-weight:400;line-height:1.95;color:#d8dce4;text-wrap:pretty}
+.trailer-purpose p+p{color:var(--light)}
+.trailer-finale h2{font-family:var(--stage-type);font-weight:500;line-height:1.15;letter-spacing:.035em;margin-bottom:0}
+.trailer-finale h2 span{display:block}
+.trailer-finale h2 .finale-prelude{color:#d4d8df;font-size:clamp(21px,2.3vw,32px);margin-bottom:26px}
+.trailer-finale h2 .finale-build{color:#f1eadd;font-size:clamp(22px,2.65vw,37px);margin-bottom:5px}
+.trailer-finale h2 .finale-word{font-size:clamp(36px,6vw,82px);font-weight:700;letter-spacing:.025em;color:var(--gold);text-shadow:0 2px 22px #d7a95828;overflow-wrap:normal}
+.trailer-year{font-family:var(--heading);font-size:clamp(26px,3vw,42px);letter-spacing:.35em;color:#d4bf96;margin:25px 0}
+.trailer-development{font-size:9px;letter-spacing:.1em}
+#main>.section .panel,main section:not(#show) .panel{border-radius:0;border-color:rgba(228,191,124,.15);background:linear-gradient(125deg,rgba(8,15,28,.95),rgba(5,10,20,.88));box-shadow:0 15px 50px #0002}
+main section:not(#show) h2{font-family:var(--stage-type);font-size:clamp(32px,4vw,54px);font-weight:600;letter-spacing:.015em}
+main section:not(#show) h3{font-family:var(--stage-type);font-size:26px;font-weight:500}
+.card{border-radius:0;border-top:1px solid rgba(228,191,124,.45);background:linear-gradient(145deg,rgba(24,38,60,.55),rgba(8,15,28,.3));box-shadow:none}
+.sound-player{border-radius:3px;border-color:rgba(228,191,124,.3);background:rgba(4,9,18,.94);box-shadow:0 8px 25px #0005}
+.sound-player button{border-radius:0}
+footer{background:linear-gradient(180deg,rgba(4,8,16,.8),#040810);border-top-color:rgba(228,191,124,.18)}
+@media(max-width:900px){.tabs{gap:12px}.trailer-hero{padding-top:38px}.trailer-hero .show-logo{max-height:330px}}
+@media(max-width:600px){
+.header-inner{min-height:78px}.edition{font-size:7px;letter-spacing:.09em}.tabs{gap:8px}.tab{font-size:10px;padding:15px 8px}
+.trailer-hero{padding:30px 0 24px}.trailer-opening{padding:0 5px;margin-bottom:18px}.trailer-opening::before{margin-bottom:20px}
+.trailer-opening .origin-line{font-size:16px;line-height:1.2;letter-spacing:.045em;margin-bottom:14px}
+.trailer-opening .history-line{font-size:29px;line-height:1.08;margin-bottom:16px}
+.trailer-opening .return-line{font-size:21px;line-height:1.15}
+.desktop-break{display:none}.trailer-hero .logo-stage{margin:12px auto 0}.trailer-hero .show-logo{max-height:260px}
+.trailer-authors{font-size:9px;line-height:1.6;margin:8px auto 20px}
+.trailer-manifesto{font-size:29px;letter-spacing:.04em;line-height:1.15;margin-bottom:22px}
+#show .trailer-purpose,#show .trailer-finale{padding:35px 15px;background:linear-gradient(90deg,rgba(4,9,19,.55),rgba(4,9,19,.91) 20%,rgba(4,9,19,.91) 80%,rgba(4,9,19,.55))}
+.trailer-purpose p{font-size:14px;line-height:1.85}
+.trailer-finale h2 .finale-prelude{font-size:22px;margin-bottom:22px}
+.trailer-finale h2 .finale-build{font-size:23px}
+.trailer-finale h2 .finale-word{font-size:clamp(31px,8.9vw,52px);letter-spacing:0}
+.trailer-finale .actions{flex-direction:column;align-items:stretch}
+}
+
 </style>
 </head>
 
@@ -401,9 +477,9 @@ footer{padding-bottom:110px}
     <div class="wrap">
       <div class="hero-inner">
         <div class="trailer-opening">
-          <p>EL ÁLBUM QUE DESAFIÓ LAS CONVENCIONES.</p>
-          <p>LA ÓPERA ROCK QUE CAMBIÓ LA HISTORIA DEL TEATRO MUSICAL.</p>
-          <p>UN MONTAJE QUE VUELVE AL ORIGEN PARA RECUPERAR SU FUERZA Y GOLPEAR A NUESTRO TIEMPO.</p>
+          <p class="origin-line">EL ÁLBUM QUE <strong>DESAFIÓ LAS CONVENCIONES.</strong></p>
+          <p class="history-line">LA ÓPERA ROCK QUE <strong>CAMBIÓ LA HISTORIA</strong><br class="desktop-break"> DEL TEATRO MUSICAL.</p>
+          <p class="return-line">UN MONTAJE QUE VUELVE AL ORIGEN PARA RECUPERAR SU FUERZA<br class="desktop-break"> Y <strong>GOLPEAR A NUESTRO TIEMPO.</strong></p>
         </div>
         <h1 class="sr-only">Jesucristo Superhistórico</h1>
         <div class="logo-stage">
@@ -411,7 +487,7 @@ footer{padding-bottom:110px}
           <div id="show-name" class="logo-fallback" aria-hidden="true" hidden>JESUCRISTO<br>SUPERHISTÓRICO</div>
         </div>
         <p class="trailer-authors"><em>Jesus Christ Superstar</em>, de Andrew Lloyd Webber y Tim Rice.</p>
-        <p class="trailer-manifesto">POLÍTICA. PROVOCADORA.<br>RADICALMENTE HUMANA.</p>
+        <p class="trailer-manifesto"><span>POLÍTICA.</span> <span>PROVOCADORA.</span><br><strong>RADICALMENTE HUMANA.</strong></p>
         <div class="actions">
           <a class="btn primary" href="#contacto">Consultar contratación</a>
           <a class="btn" href="#disenos">Descubrir la propuesta</a>
@@ -427,7 +503,7 @@ footer{padding-bottom:110px}
   </div>
   <div class="wrap section">
     <div class="panel trailer-finale">
-      <h2>UNA OBRA QUE HIZO HISTORIA.<br><span>UNA PUESTA EN ESCENA QUE SERÁ SUPERHISTÓRICA.</span></h2>
+      <h2><span class="finale-prelude">UNA OBRA QUE HIZO HISTORIA.</span><span class="finale-build">UNA PUESTA EN ESCENA QUE SERÁ</span><span class="finale-word">SUPERHISTÓRICA.</span></h2>
       <p class="trailer-year">2027</p>
       <div class="actions">
         <a class="btn primary" href="#contacto">Consultar programación y contratación</a>
