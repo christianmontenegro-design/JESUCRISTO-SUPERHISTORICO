@@ -324,6 +324,31 @@ dialog p{font-size:11px;color:var(--muted);margin:12px 4px 0}
 .sound-status{font-size:10px;color:var(--muted);max-width:180px}
 footer{padding-bottom:110px}
 @media(max-width:600px){.sound-player{right:10px;bottom:10px;gap:9px;padding:10px;max-width:calc(100vw - 20px)}.sound-status{max-width:125px;font-size:9px}.sound-player input{width:65px}footer{padding-bottom:145px}}
+
+/* Apertura conceptual aprobada */
+.trailer-hero{padding-top:48px;padding-bottom:45px}
+.trailer-hero .hero-inner{max-width:960px}
+.trailer-opening{max-width:900px;margin:0 auto 28px;text-align:center;text-shadow:0 3px 18px #000}
+.trailer-opening p{font-family:var(--heading);font-size:clamp(18px,2.2vw,29px);font-weight:600;line-height:1.5;margin:0 0 14px;color:var(--light);text-wrap:balance}
+.trailer-opening p:last-child{color:var(--ink);font-size:clamp(16px,1.8vw,24px)}
+.trailer-hero .logo-stage{max-width:650px}
+.trailer-authors{font-size:12px;color:var(--muted);text-align:center;padding:8px 15px;background:rgba(4,9,18,.65);display:table;margin:0 auto 22px;border-radius:4px}
+.trailer-manifesto{font-family:var(--heading);font-size:clamp(21px,2.8vw,35px);line-height:1.5;font-weight:600;color:var(--gold);text-shadow:0 3px 16px #000}
+.trailer-purpose{text-align:center}
+.trailer-purpose p{max-width:790px;margin:0 auto 24px;font-size:clamp(15px,1.6vw,19px);line-height:1.95}
+.trailer-purpose p:last-child{margin-bottom:0}
+.trailer-finale{text-align:center}
+.trailer-finale h2{font-size:clamp(23px,3vw,38px);line-height:1.65}
+.trailer-finale h2 span{color:var(--gold)}
+.trailer-year{font-family:var(--heading);font-size:clamp(40px,6vw,68px);letter-spacing:.16em;color:var(--gold);margin:20px 0}
+.trailer-finale .actions{justify-content:center}
+.trailer-development{font-size:10px;letter-spacing:.08em;color:var(--muted);margin:25px 0 0}
+.artistic-details-body>.wrap{width:100%}
+.artistic-details-body>.section{padding:25px 0 0}
+.artistic-details-body .panel{padding:25px;border:0;box-shadow:none;background:rgba(18,26,42,.4)}
+.artistic-details-body p{font-size:14px}
+@media(max-width:600px){.trailer-hero{padding-top:30px}.trailer-opening p{font-size:18px}.trailer-opening p:last-child{font-size:15px}.trailer-authors{font-size:10px}.artistic-details-body .panel{padding:15px}.trailer-finale h2{font-size:23px}}
+
 </style>
 </head>
 
@@ -372,37 +397,88 @@ footer{padding-bottom:110px}
 <main id="main" tabindex="-1">
 
 <section id="show" role="tabpanel" aria-labelledby="tab-show">
-  <div class="hero">
+  <div class="hero trailer-hero">
     <div class="wrap">
       <div class="hero-inner">
-        <p class="kicker">Mastro Pro produce · Compañía Mastroluz lleva a escena</p>
-        <h1 class="sr-only">Jesucristo Superhistórico</h1>
-
-        <div class="logo-stage">
-          <img class="show-logo" src="./SUPERHISTORICO.png?v=3"
-            alt="" fetchpriority="high" data-fallback="show-name">
-          <div id="show-name" class="logo-fallback" aria-hidden="true" hidden>
-            JESUCRISTO<br>SUPERHISTÓRICO
-          </div>
+        <div class="trailer-opening">
+          <p>EL ÁLBUM QUE DESAFIÓ LAS CONVENCIONES.</p>
+          <p>LA ÓPERA ROCK QUE CAMBIÓ LA HISTORIA DEL TEATRO MUSICAL.</p>
+          <p>UN MONTAJE QUE VUELVE AL ORIGEN PARA RECUPERAR SU FUERZA Y GOLPEAR A NUESTRO TIEMPO.</p>
         </div>
-
-        <div class="hero-copy">
-          <h2 class="hero-title">
-            La fuerza de su origen.<br>La mirada del Chile de hoy.
-          </h2>
-          <p>Una propuesta contemporánea chilena de <em>Jesus Christ Superstar</em>, la ópera rock de Andrew Lloyd Webber y Tim Rice.</p>
-          <p><strong>Dirección artística y concepción de la propuesta: Christian Montenegro.</strong><br>Política, vanguardista y rupturista.</p>
-          <span class="status">Montaje en desarrollo · Chile 2027</span>
-          <div class="actions">
-            <a class="btn primary" href="#contacto">Consultar contratación</a>
-            <a class="btn" href="#disenos">Descubrir la propuesta</a>
-          </div>
+        <h1 class="sr-only">Jesucristo Superhistórico</h1>
+        <div class="logo-stage">
+          <img class="show-logo" src="./SUPERHISTORICO.png?v=3" alt="" fetchpriority="high" data-fallback="show-name">
+          <div id="show-name" class="logo-fallback" aria-hidden="true" hidden>JESUCRISTO<br>SUPERHISTÓRICO</div>
+        </div>
+        <p class="trailer-authors"><em>Jesus Christ Superstar</em>, de Andrew Lloyd Webber y Tim Rice.</p>
+        <p class="trailer-manifesto">POLÍTICA. PROVOCADORA.<br>RADICALMENTE HUMANA.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contacto">Consultar contratación</a>
+          <a class="btn" href="#disenos">Descubrir la propuesta</a>
         </div>
       </div>
     </div>
   </div>
-
   <div class="wrap section">
+    <div class="panel trailer-purpose">
+      <p>Volver al disco conceptual original para llevar a escena toda su potencia musical, su intensidad dramática y la audacia con que desafió a su tiempo.</p>
+      <p>Una visión de vanguardia, con identidad propia y la ambición de llevar su fuerza original a una nueva dimensión escénica.</p>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="panel trailer-finale">
+      <h2>UNA OBRA QUE HIZO HISTORIA.<br><span>UNA PUESTA EN ESCENA QUE SERÁ SUPERHISTÓRICA.</span></h2>
+      <p class="trailer-year">2027</p>
+      <div class="actions">
+        <a class="btn primary" href="#contacto">Consultar programación y contratación</a>
+        <a class="btn" href="#elenco">Conocer al equipo</a>
+      </div>
+      <p class="trailer-development">Montaje en desarrollo · Contratación anticipada</p>
+    </div>
+  </div>
+</section>
+
+<section id="elenco" role="tabpanel" aria-labelledby="tab-elenco" hidden>
+  <div class="wrap section page-heading">
+    <div class="panel">
+      <p class="kicker">El equipo artístico</p>
+      <h2>Experiencia interpretativa.<br>Una nueva mirada escénica.</h2>
+      <p class="intro">El proyecto cuenta con intérpretes que han
+        abordado sus personajes en otros montajes. Esta puesta
+        propone un nuevo proceso de creación y una identidad propia.</p>
+      <div class="split">
+        <article>
+          <span class="tag">Dirección artística y concepción de la propuesta</span>
+          <h3>Christian Montenegro</h3>
+          <p>Actor y gestor cultural. Convocado por Mastro Pro para dirigir artísticamente a Compañía Mastroluz, diseña y desarrolla la concepción de esta puesta: una lectura contemporánea chilena que busca recuperar la fuerza política, dramática y musical que reconoce en el disco conceptual original.</p>
+          <p class="muted">Su dirección articula interpretación, música, movimiento y realización escénica, con una aspiración de alto nivel técnico e interpretativo.</p>
+        </article>
+        <div class="placeholder">
+          <div>
+            <strong>Dirección y elenco</strong>
+            <small>Próxima incorporación: fotografías oficiales,
+              personajes y reseñas de los intérpretes.</small>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card"><span class="number">DIRECCIÓN ARTÍSTICA</span><h3>Christian Montenegro</h3><p>Diseño y concepción de la propuesta artística. Dirección artística de la puesta, por convocatoria de Mastro Pro.</p></article>
+        <article class="card"><span class="number">DIRECCIÓN MUSICAL</span><h3>Marcelo Nieto</h3><p>Dirección musical del montaje, en articulación con la dirección artística y la propuesta escénica.</p></article>
+        <article class="card"><span class="number">DIRECCIÓN Y CREACIÓN COREOGRÁFICA</span><h3>Roxana Mendoza</h3><p>Dirección y creación coreográfica del montaje, en articulación con la dirección artística y musical.</p></article>
+        <article class="card"><span class="number">PRODUCTORA</span><h3>Mastro Pro</h3><p>Productora que convoca a la dirección artística y articula la producción del montaje.</p></article>
+        <article class="card"><span class="number">COMPAÑÍA</span><h3>Mastroluz</h3><p>Compañía de Artes Integrales que lleva la propuesta a escena.</p></article>
+      </div>
+      <div class="note">
+        Los créditos completos del equipo artístico y musical
+        se incorporarán una vez revisados para su publicación.
+      </div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="panel">
+      <details class="artistic-details">
+        <summary>Concepción y propuesta artística del montaje</summary>
+        <div class="artistic-details-body"><div class="wrap section">
     <div class="panel">
       <p class="kicker">La visión del director</p>
       <h2>Recuperar el origen.<br>Confrontar el presente.</h2>
@@ -443,43 +519,8 @@ footer{padding-bottom:110px}
       <div class="note">Montaje en desarrollo para 2027. El nivel descrito constituye el objetivo artístico y de producción. El elenco disponible y los diseños del proyecto respaldan su presentación para conversaciones de contratación anticipada.</div>
       <div class="actions"><a class="btn primary" href="#contacto">Consultar programación y contratación</a><a class="btn" href="#formatos">Ver formatos</a></div>
     </div>
-  </div>
-</section>
-
-<section id="elenco" role="tabpanel" aria-labelledby="tab-elenco" hidden>
-  <div class="wrap section page-heading">
-    <div class="panel">
-      <p class="kicker">El equipo artístico</p>
-      <h2>Experiencia interpretativa.<br>Una nueva mirada escénica.</h2>
-      <p class="intro">El proyecto cuenta con intérpretes que han
-        abordado sus personajes en otros montajes. Esta puesta
-        propone un nuevo proceso de creación y una identidad propia.</p>
-      <div class="split">
-        <article>
-          <span class="tag">Dirección artística y concepción de la propuesta</span>
-          <h3>Christian Montenegro</h3>
-          <p>Actor y gestor cultural. Convocado por Mastro Pro para dirigir artísticamente a Compañía Mastroluz, diseña y desarrolla la concepción de esta puesta: una lectura contemporánea chilena que busca recuperar la fuerza política, dramática y musical que reconoce en el disco conceptual original.</p>
-          <p class="muted">Su dirección articula interpretación, música, movimiento y realización escénica, con una aspiración de alto nivel técnico e interpretativo.</p>
-        </article>
-        <div class="placeholder">
-          <div>
-            <strong>Dirección y elenco</strong>
-            <small>Próxima incorporación: fotografías oficiales,
-              personajes y reseñas de los intérpretes.</small>
-          </div>
-        </div>
-      </div>
-      <div class="grid">
-        <article class="card"><span class="number">DIRECCIÓN ARTÍSTICA</span><h3>Christian Montenegro</h3><p>Diseño y concepción de la propuesta artística. Dirección artística de la puesta, por convocatoria de Mastro Pro.</p></article>
-        <article class="card"><span class="number">DIRECCIÓN MUSICAL</span><h3>Marcelo Nieto</h3><p>Dirección musical del montaje, en articulación con la dirección artística y la propuesta escénica.</p></article>
-        <article class="card"><span class="number">DIRECCIÓN Y CREACIÓN COREOGRÁFICA</span><h3>Roxana Mendoza</h3><p>Dirección y creación coreográfica del montaje, en articulación con la dirección artística y musical.</p></article>
-        <article class="card"><span class="number">PRODUCTORA</span><h3>Mastro Pro</h3><p>Productora que convoca a la dirección artística y articula la producción del montaje.</p></article>
-        <article class="card"><span class="number">COMPAÑÍA</span><h3>Mastroluz</h3><p>Compañía de Artes Integrales que lleva la propuesta a escena.</p></article>
-      </div>
-      <div class="note">
-        Los créditos completos del equipo artístico y musical
-        se incorporarán una vez revisados para su publicación.
-      </div>
+  </div></div>
+      </details>
     </div>
   </div>
 </section>
