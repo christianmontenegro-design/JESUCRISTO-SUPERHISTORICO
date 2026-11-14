@@ -450,6 +450,42 @@ main section:not(#show) .team-lead h3{font-size:34px}
 .cast-portrait{position:relative;aspect-ratio:0.46;overflow:hidden;background:#111}.cast-portrait img{position:absolute;height:115%;width:400%;max-width:none;left:calc(var(--person) * -100%);top:-10%;object-fit:fill}
 .cast-caption{padding:25px 12px;text-align:center}.cast-caption .kicker{margin-bottom:8px}.cast-caption h3{margin:0;font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-size:clamp(25px,3vw,38px)}.cast-center{box-shadow:0 0 45px #e1bd7914}
 @media(max-width:700px){.cast-lineup{gap:8px;margin-top:25px;grid-template-columns:1fr 1.12fr 1fr}.cast-caption{padding:16px 3px}.cast-caption h3{font-size:22px}.cast-caption .kicker{font-size:10px;letter-spacing:.08em}}
+
+/* Letras originales: consigna integrada a la apertura escénica. */
+.trailer-restoration{
+  position:relative;max-width:800px;margin:30px auto 28px;
+  padding:26px 16px 24px;text-align:center;
+  background:radial-gradient(ellipse at center,rgba(228,191,124,.065),transparent 72%);
+}
+.trailer-restoration::before,.trailer-restoration::after{
+  content:"";position:absolute;left:15%;right:15%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(228,191,124,.55),transparent);
+}
+.trailer-restoration::before{top:0}
+.trailer-restoration::after{bottom:0}
+.restoration-statement{
+  margin:0;font-family:var(--stage-type);line-height:1.2;
+  letter-spacing:.035em;text-shadow:0 3px 18px #000;
+}
+.restoration-lead,.restoration-source,.restoration-claim{display:block;text-wrap:balance}
+.restoration-lead{font-size:clamp(25px,2.8vw,38px);font-weight:500;color:var(--ink)}
+.restoration-source{font-size:clamp(22px,2.3vw,31px);font-weight:500;color:#e4ddcf;margin-top:4px}
+.restoration-claim{
+  font-size:clamp(42px,4.9vw,62px);font-weight:700;line-height:1.05;
+  letter-spacing:.06em;color:var(--gold);margin-top:10px;
+}
+.restoration-note{
+  max-width:590px;margin:15px auto 0;font-size:12px;line-height:1.7;
+  color:#d0d3da;text-wrap:balance;text-shadow:0 2px 10px #000;
+}
+@media(max-width:600px){
+  .trailer-restoration{margin:26px auto 24px;padding:22px 8px}
+  .restoration-lead{font-size:26px}
+  .restoration-source{font-size:22px;letter-spacing:.02em}
+  .restoration-claim{font-size:46px;letter-spacing:.045em}
+  .restoration-note{font-size:11px}
+}
+
 </style>
 </head>
 
@@ -515,8 +551,10 @@ main section:not(#show) .team-lead h3{font-size:34px}
         </div>
         <p class="trailer-authors"><em>Jesus Christ Superstar</em>, de Andrew Lloyd Webber y Tim Rice.</p>
         <p class="trailer-manifesto"><span>POLÍTICA.</span> <span>PROVOCADORA.</span><br><strong>RADICALMENTE HUMANA.</strong></p>
-        <p class="trailer-manifesto">LA MÚSICA QUE HIZO HISTORIA<br>Y LAS LETRAS <strong>SIN CENSURA.</strong></p>
-        <p class="trailer-authors">Una adaptación al español de las letras originales en inglés,<br>sin censura ni suavizaciones.</p>
+        <div class="trailer-restoration">
+          <p class="restoration-statement"><span class="restoration-lead">LA MÚSICA QUE HIZO HISTORIA</span> <span class="restoration-source">Y LAS LETRAS ORIGINALES EN INGLÉS,</span> <strong class="restoration-claim">SIN CENSURA.</strong></p>
+          <p class="restoration-note">Una adaptación al español, sin censura ni suavizaciones.</p>
+        </div>
         <div class="actions">
           <a class="btn primary" href="#contacto">Consultar contratación</a>
           <a class="btn" href="#disenos">Descubrir la propuesta</a>
