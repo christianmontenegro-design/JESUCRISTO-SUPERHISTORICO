@@ -872,108 +872,60 @@ header .header-inner.identity-header{
 
 <section id="disenos" role="tabpanel" aria-labelledby="tab-disenos" hidden>
 <style>
-#disenos{--uv-paper:#f2debb;--uv-quiet:#cbd0db;background:linear-gradient(180deg,#050b14e8,#07101cf5 60%,#050912eb);overflow:hidden}
-#disenos .uv-wrap{width:min(1250px,92%);margin-inline:auto}
-#disenos .uv-opening{max-width:870px;text-align:center;padding:64px 0 40px;margin:auto}
-#disenos .uv-eyebrow{font:600 10px/1.6 var(--body);letter-spacing:.27em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
-#disenos .uv-opening h2{font:600 clamp(48px,7vw,88px)/.98 var(--stage-type);letter-spacing:.015em;margin:0 0 22px;color:#fff1d7}
-#disenos .uv-opening h2 em{font-style:normal;color:var(--gold)}
-#disenos .uv-lead{font-size:15px;line-height:1.9;color:var(--uv-quiet);max-width:730px;margin:0 auto 20px;text-wrap:pretty}
-#disenos .uv-credit{font-size:11px;color:#d4b887;margin:0;letter-spacing:.04em}
-#disenos .uv-credit strong{font-weight:500;color:#f3dec0}
-#disenos .uv-chapter{position:relative;margin:35px 0 0;padding:20px 0 12px;border-top:1px solid #d1a66a42;display:flex;gap:23px;align-items:baseline;justify-content:space-between}
-#disenos .uv-chapter-left{display:flex;align-items:baseline;gap:16px}
-#disenos .uv-number{font:400 16px/1 var(--heading);color:var(--gold)}
-#disenos .uv-chapter h3{font:600 clamp(29px,3.6vw,47px)/1.1 var(--stage-type);letter-spacing:.025em;margin:0;color:#fff1d9}
-#disenos .uv-chapter-note{font-size:10px;color:#b9c1cd;letter-spacing:.08em;margin:0}
-#disenos .uv-art{margin:0;position:relative}
-#disenos .uv-art-button{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;position:relative;color:var(--uv-paper);line-height:0}
-#disenos .uv-art-button img{display:block;width:100%;height:auto}
-#disenos .uv-art-button::after{content:'Ampliar composición ↗';position:absolute;right:18px;bottom:16px;background:#050c18de;color:#f4deba;border:1px solid #e4bf7860;padding:9px 13px;font:500 10px/1.3 var(--body);letter-spacing:.04em;transition:background .2s}
-#disenos .uv-art-button:hover::after{background:#293544}
-#disenos .uv-art figcaption{font-size:10px;line-height:1.7;color:#aeb8c8;padding:13px 0 0;letter-spacing:.025em}
-#disenos .uv-voices{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:30px 0 43px;margin:0}
-#disenos .uv-voices article{padding-top:15px;border-top:1px solid #cba2673b}
-#disenos .uv-voices h4{font:500 24px/1.1 var(--stage-type);color:var(--gold);margin:0 0 10px}
-#disenos .uv-voices p{font-size:12px;line-height:1.85;color:var(--uv-quiet);margin:0}
-#disenos .uv-stage-copy{display:grid;grid-template-columns:1fr 1fr;gap:45px;padding:28px 0 48px;max-width:1070px;margin:auto}
-#disenos .uv-stage-copy h4{font:500 29px/1.2 var(--stage-type);color:var(--gold);margin:0 0 13px}
-#disenos .uv-stage-copy p{font-size:13px;line-height:1.85;color:var(--uv-quiet);margin:0}
-#disenos .uv-finale{position:relative;margin:16px 0 0}
-#disenos .uv-finale svg{width:100%;height:auto;display:block}
-#disenos .uv-finale-copy{position:relative;text-align:center;padding:32px 20px 40px;background:linear-gradient(100deg,#071122,#0b1020,#11101b);border-bottom:1px solid #d1a66a42}
-#disenos .uv-finale-copy h3{font:600 clamp(32px,4.5vw,58px)/1.1 var(--stage-type);margin:0 0 10px;color:#f9e6c4}
-#disenos .uv-finale-copy p{font-size:13px;line-height:1.8;color:#cbd0db;margin:0 auto;max-width:610px}
-#disenos .uv-closing{padding:42px 0 64px;text-align:center}
-#disenos .uv-closing p{font-size:10px;color:#aeb8c8;margin:0 0 20px}
-#disenos .uv-lightbox{width:min(1500px,97vw);max-height:96svh;padding:48px 14px 14px;border:1px solid #d2ac70;background:#060c15}
+#disenos{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 5% 18%,#0b386d48,transparent 40%),radial-gradient(ellipse at 96% 65%,#671b2d30,transparent 40%),linear-gradient(180deg,#060d18f5,#040913f5);--uv-paper:#f2dfbc}
+#disenos .uv-shell{position:relative;width:min(1300px,92%);margin:0 auto;z-index:1;padding:42px 0 55px}
+#disenos .uv-drone{position:absolute;width:clamp(145px,19vw,280px);height:auto;z-index:2;pointer-events:none;filter:drop-shadow(0 9px 17px #000b);opacity:.9}
+#disenos .uv-drone-left{top:34px;left:-70px;transform:rotate(13deg)}
+#disenos .uv-drone-right{top:63px;right:-69px;transform:scaleX(-1) rotate(10deg)}
+#disenos .uv-intro{text-align:center;max-width:880px;margin:auto;padding:0 45px 28px}
+#disenos .uv-kicker{font:600 9px/1.6 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+#disenos .uv-intro h2{font:600 clamp(34px,4.6vw,63px)/1.05 var(--stage-type);letter-spacing:.015em;color:#fff1db;margin:0 0 19px}
+#disenos .uv-intro h2 span{color:var(--gold)}
+#disenos .uv-intro .uv-lead{font-size:14px;line-height:1.85;color:#d2d7df;margin:0 auto 15px;max-width:760px;text-wrap:pretty}
+#disenos .uv-credit{font-size:10px;line-height:1.7;color:#c9b28b;letter-spacing:.04em;margin:0}
+#disenos .uv-credit strong{color:#f0d8b1;font-weight:500}
+#disenos .uv-mosaic{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:17px;align-items:start;margin:4px 0 28px}
+#disenos .uv-collage{grid-column:span 3;position:relative;margin:0;min-width:0;background:#0a101b;border:1px solid #d6b37a35;box-shadow:0 10px 30px #0004;overflow:hidden}
+#disenos .uv-collage.compact{grid-column:span 2}
+#disenos .uv-art-button{position:relative;display:block;width:100%;border:0;padding:0;background:#0a101b;color:#f3d7a7;text-align:left;line-height:0}
+#disenos .uv-art-button img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;transition:filter .2s}
+#disenos .uv-art-button:hover img{filter:brightness(1.08)}
+#disenos .uv-art-button::after{content:'↗';position:absolute;bottom:10px;right:10px;padding:6px 8px;background:#060c17ce;border:1px solid #f0d2a04a;color:#ffe5ba;font:400 15px/1 var(--body)}
+#disenos .uv-art-number{position:absolute;left:12px;bottom:12px;font:500 10px/1 var(--stage-type);letter-spacing:.12em;color:#f2d29b;background:#050b15c9;padding:6px 9px;pointer-events:none}
+#disenos .uv-manifesto{grid-column:1/-1;position:relative;text-align:center;padding:14px 5% 18px;max-width:1000px;margin:0 auto}
+#disenos .uv-manifesto h3{font:500 clamp(25px,3.1vw,40px)/1.1 var(--stage-type);color:#f0d3a1;margin:0 0 13px}
+#disenos .uv-manifesto p{font-size:13px;line-height:1.9;color:#c9d0db;margin:0 auto;max-width:850px;text-wrap:pretty}
+#disenos .uv-outro{text-align:center;max-width:850px;margin:32px auto 0;padding-top:27px;border-top:1px solid #e4bf7840}
+#disenos .uv-outro h3{font:500 clamp(26px,3.1vw,40px)/1.1 var(--stage-type);color:#f5dfb9;margin:0 0 14px}
+#disenos .uv-outro p{font-size:13px;line-height:1.9;color:#c9d0db;margin:0 auto 23px;max-width:720px;text-wrap:pretty}
+#disenos .uv-outro small{display:block;font-size:9px;color:#aab8cb;margin:20px 0 0}
+#disenos .uv-lightbox{width:min(1480px,97vw);max-height:96svh;padding:46px 12px 12px;border:1px solid #d2ac70;background:#060c15}
 #disenos .uv-lightbox::backdrop{background:#02050bf2;backdrop-filter:blur(6px)}
-#disenos .uv-lightbox img{max-height:80svh;width:100%;object-fit:contain;display:block}
-#disenos .uv-lightbox p{font-size:11px;color:#c5cbd6;margin:12px 3px 0;line-height:1.5}
-#disenos .uv-close{position:absolute;top:8px;right:14px;background:transparent;border:0;color:#f5dbb3;font-size:25px;line-height:1;padding:5px}
-@media(max-width:700px){
- #disenos .uv-opening{padding:40px 0 20px}
- #disenos .uv-opening h2{font-size:53px}
- #disenos .uv-lead{font-size:13px}
- #disenos .uv-chapter{display:block;margin-top:24px}
- #disenos .uv-chapter-note{margin:10px 0 0 37px;font-size:9px}
- #disenos .uv-voices{grid-template-columns:1fr 1fr;gap:20px;padding:20px 0 30px}
- #disenos .uv-voices p{font-size:11px}
- #disenos .uv-voices h4{font-size:23px}
- #disenos .uv-stage-copy{grid-template-columns:1fr;gap:25px;padding:22px 0 32px}
- #disenos .uv-stage-copy p{font-size:12px}
- #disenos .uv-art-button::after{font-size:8px;bottom:8px;right:8px;padding:7px 9px}
- #disenos .uv-art figcaption{font-size:9px}
- #disenos .uv-finale-copy{padding:25px 14px 30px}
- #disenos .uv-finale-copy p{font-size:12px}
- #disenos .uv-closing{padding:30px 0 45px}
-}
+#disenos .uv-lightbox img{display:block;width:100%;max-height:82svh;object-fit:contain}
+#disenos .uv-lightbox p{font-size:10px;color:#c5cbd6;line-height:1.5;margin:10px 3px 0}
+#disenos .uv-close{position:absolute;top:6px;right:12px;padding:5px;border:0;background:transparent;color:#f5dbb3;font-size:25px;line-height:1}
+@media(max-width:1000px){#disenos .uv-intro{padding-inline:55px}#disenos .uv-drone{width:175px}#disenos .uv-drone-left{left:-65px;top:48px}#disenos .uv-drone-right{right:-65px;top:55px}#disenos .uv-collage.compact{grid-column:span 3}#disenos .uv-collage.stage{grid-column:2/6}#disenos .uv-mosaic{gap:13px}}
+@media(max-width:620px){#disenos .uv-shell{width:92%;padding:36px 0 40px}#disenos .uv-intro{padding:15px 2px 20px}#disenos .uv-intro h2{font-size:38px}#disenos .uv-intro .uv-lead{font-size:12px;line-height:1.85}#disenos .uv-kicker{font-size:8px;letter-spacing:.2em}#disenos .uv-credit{font-size:9px}#disenos .uv-drone{width:112px;opacity:.65}#disenos .uv-drone-left{top:2px;left:-43px}#disenos .uv-drone-right{top:5px;right:-40px}#disenos .uv-mosaic{grid-template-columns:1fr 1fr;gap:10px}#disenos .uv-collage,#disenos .uv-collage.compact,#disenos .uv-collage.stage{grid-column:span 1}#disenos .uv-collage.stage{grid-column:1/-1;width:100%;max-width:440px;margin-inline:auto}#disenos .uv-art-button::after{font-size:11px;bottom:6px;right:6px;padding:4px 5px}#disenos .uv-art-number{font-size:8px;left:6px;bottom:6px;padding:4px 5px}#disenos .uv-manifesto{padding:15px 3px}#disenos .uv-manifesto h3{font-size:28px}#disenos .uv-manifesto p,#disenos .uv-outro p{font-size:12px;line-height:1.85}#disenos .uv-outro{margin-top:24px;padding-top:24px}}
+@media(prefers-reduced-motion:reduce){#disenos .uv-art-button img{transition:none}}
 </style>
-<div class="uv-wrap">
- <header class="uv-opening" style="background:none;border:0">
-  <p class="uv-eyebrow">Universo visual · Vestuario y escenotecnia</p>
-  <h2>El mundo<br><em>toma forma.</em></h2>
-  <p class="uv-lead">El poder se viste. La rebeldía deja huellas. El escenario se transforma. Realismo y boceto se encuentran para revelar el lenguaje visual de <em>Jesucristo Superhistórico</em>.</p>
-  <p class="uv-credit">Concepción artística: <strong>Christian Montenegro</strong> · Desarrollo visual: <strong>MastroLabs</strong></p>
- </header>
- <div class="uv-chapter"><div class="uv-chapter-left"><span class="uv-number">01</span><h3>Vestir el conflicto.</h3></div><p class="uv-chapter-note">Silueta · Materia · Transformación</p></div>
- <figure class="uv-art">
-  <button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/composicion-vestuario.webp" data-uv-caption="Vestuario · Poder, exceso, rebelión y trascendencia." aria-label="Ampliar la composición de vestuario: figuras realistas que se funden con bocetos">
-   <img src="./assets/universo-visual/composicion-vestuario.webp" width="1672" height="941" decoding="async" alt="Pilatos, Herodes, una guerrillera y un ángel rock: el vestuario realista se funde con dibujos a lápiz, muestras de tela y detalles de confección.">
-  </button>
-  <figcaption>Una composición del proceso creativo: personajes, texturas y trazos conviven en un mismo lenguaje.</figcaption>
- </figure>
- <div class="uv-voices">
-  <article><h4>Poder</h4><p>Pilatos: metal oscuro, líneas imperiales y tecnología. El vestuario acompaña el paso del hombre a la autoridad.</p></article>
-  <article><h4>Exceso</h4><p>Herodes: brillo, plumas y una máscara deliberadamente teatral. La fiesta revela el rostro del poder.</p></article>
-  <article><h4>Rebelión</h4><p>Simón Zelote: telas intervenidas, capas irregulares y acentos rojos. La energía de la calle entra en la danza.</p></article>
-  <article><h4>Trascendencia</h4><p>Ángeles rock: alas metalizadas, luz y movimiento. Una apoteosis que une lo sagrado y el concierto.</p></article>
- </div>
- <div class="uv-chapter"><div class="uv-chapter-left"><span class="uv-number">02</span><h3>Transformar el espacio.</h3></div><p class="uv-chapter-note">Estructura · Luz · Imagen</p></div>
- <figure class="uv-art">
-  <button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/composicion-escenotecnia.webp" data-uv-caption="Escenotecnia · Módulos, pantallas, escalera móvil y cruz insertable." aria-label="Ampliar la composición de escenotecnia, entre escenario realista y dibujo">
-   <img src="./assets/universo-visual/composicion-escenotecnia.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Una escena iluminada en azul, rojo y ámbar se convierte en boceto: Templo con telas blancas, escalera y cruz, módulo de Pilatos y cámara luminosa; estudios de estructura y ruedas en primer plano.">
-  </button>
-  <figcaption>Del trazo al escenario: una visión conjunta de arquitectura teatral, luz y transformación escénica.</figcaption>
- </figure>
- <div class="uv-stage-copy">
-  <article><h4>Un escenario, distintos territorios.</h4><p>El Templo y el mundo de Pilatos ocupan los extremos. Entre ellos, las pantallas y las plataformas de músicos construyen un espacio de exposición, vigilancia y espectáculo. Las telas blancas del Templo reciben el color de la luz.</p></article>
-  <article><h4>La transformación a la vista.</h4><p>Una escalera móvil articula niveles y recorridos. En su lado posterior, opuesto a los peldaños, la base recibe la pieza que completa la cruz. Estructura, movimiento e imagen acompañan el avance del drama.</p></article>
- </div>
- <div class="uv-finale-copy"><p class="uv-eyebrow">Vestuario + Espacio + Luz</p><h3>Del papel a la escena.</h3><p>Un mismo mundo visual articula el cuerpo, la materia y la imagen del espectáculo.</p></div>
- <div class="uv-closing"><p>Composiciones conceptuales del proceso de creación del montaje.</p><a class="btn" href="#contratacion">Contacto y contratación</a></div>
+<img class="uv-drone uv-drone-left" src="./assets/universo-visual/drone-marco.webp" alt="" aria-hidden="true" width="450" height="300" decoding="async">
+<img class="uv-drone uv-drone-right" src="./assets/universo-visual/drone-marco.webp" alt="" aria-hidden="true" width="450" height="300" decoding="async">
+<div class="uv-shell">
+<div class="uv-intro"><p class="uv-kicker">Universo visual · Jesucristo Superhistórico</p><h2>Lo conocido.<br><span>Como nunca lo has visto.</span></h2><p class="uv-lead">Una ópera rock que conoces. Un mundo que aún no has visto. <em>Jesucristo Superhistórico</em> prepara una propuesta visual de vanguardia, ambiciosa y provocadora, que busca sorprender incluso a quienes creen conocer cada escena.</p><p class="uv-credit">Concepción artística: <strong>Christian Montenegro</strong> · Desarrollo visual: <strong>MastroLabs</strong></p></div>
+<div class="uv-mosaic"><figure class="uv-collage human"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/collage-personajes.webp" aria-label="Ampliar exploración visual 01"><img src="./assets/universo-visual/collage-personajes.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Jesús, María Magdalena y Judas, entre interpretación, vestuario y estudios a lápiz."><span class="uv-art-number" aria-hidden="true">01</span></button></figure><figure class="uv-collage empire"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/collage-imperio.webp" aria-label="Ampliar exploración visual 02"><img src="./assets/universo-visual/collage-imperio.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Pilatos, soldados romanos y tropas tecnológicas entre realismo, bocetos y detalles de diseño."><span class="uv-art-number" aria-hidden="true">02</span></button></figure><figure class="uv-collage compact"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/collage-poder.webp" aria-label="Ampliar exploración visual 03"><img src="./assets/universo-visual/collage-poder.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Herodes, Caifás y Anás, con exploraciones de silueta, máscaras y materiales."><span class="uv-art-number" aria-hidden="true">03</span></button></figure><figure class="uv-collage compact"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/composicion-vestuario.webp" aria-label="Ampliar exploración visual 04"><img src="./assets/universo-visual/composicion-vestuario.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Una composición de vestuario que une figuras realistas, dibujo y texturas."><span class="uv-art-number" aria-hidden="true">04</span></button></figure><figure class="uv-collage compact"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/collage-tropas.webp" aria-label="Ampliar exploración visual 05"><img src="./assets/universo-visual/collage-tropas.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Tropas imperiales de gran volumen, luces rojas y verdes y estudios del traje escénico."><span class="uv-art-number" aria-hidden="true">05</span></button></figure><div class="uv-manifesto"><p class="uv-kicker">Una visión · Todas las disciplinas</p><h3>La próxima imagen puede cambiarlo todo.</h3><p>La concepción de Christian Montenegro abre en MastroLabs un laboratorio de creación: interpretación, diseño y tecnología se cruzan en una búsqueda de alto nivel, con una identidad escénica propia. Cada exploración abre otra posibilidad; cada decisión acerca el montaje a una experiencia de gran potencia visual.</p></div><figure class="uv-collage movement"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/collage-movimiento.webp" aria-label="Ampliar exploración visual 06"><img src="./assets/universo-visual/collage-movimiento.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Bailarinas guerrilleras, ángeles rock y Judas en moto, entre escenas, movimiento y bocetos."><span class="uv-art-number" aria-hidden="true">06</span></button></figure><figure class="uv-collage stage"><button class="uv-art-button" type="button" data-uv-image="./assets/universo-visual/composicion-escenotecnia.webp" aria-label="Ampliar exploración visual 07"><img src="./assets/universo-visual/composicion-escenotecnia.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Espacio escénico, módulos, escalera y cruz, con telas blancas en el Templo y estudios de estructura."><span class="uv-art-number" aria-hidden="true">07</span></button></figure></div>
+<div class="uv-outro"><h3>Esto es solo una primera mirada.</h3><p>El universo ya empieza a revelarse. Sus contrastes, sus transformaciones y sus encuentros cobrarán otra dimensión con la música, los cuerpos y la luz. Lo que ocurrirá dentro de él se descubrirá en escena.</p><a class="btn" href="#contratacion">Contacto y contratación</a><small>MastroLabs · Exploraciones del proceso de creación artística.</small></div>
 </div>
-<dialog class="uv-lightbox" id="uv-lightbox" aria-label="Composición visual ampliada"><button class="uv-close" type="button" aria-label="Cerrar composición ampliada">×</button><img id="uv-lightbox-image" alt=""><p id="uv-lightbox-caption"></p></dialog>
+<dialog class="uv-lightbox" id="uv-lightbox" aria-label="Exploración visual ampliada"><button class="uv-close" type="button" aria-label="Cerrar composición ampliada">×</button><img id="uv-lightbox-image" alt=""><p id="uv-lightbox-caption"></p></dialog>
 <script>
 (() => {
  const root=document.getElementById('disenos');
  const modal=root.querySelector('#uv-lightbox');
  const picture=root.querySelector('#uv-lightbox-image');
  const caption=root.querySelector('#uv-lightbox-caption');
- root.querySelectorAll('[data-uv-image]').forEach(button=>button.addEventListener('click',()=>{
+ root.querySelectorAll('[data-uv-image]').forEach((button,index)=>button.addEventListener('click',()=>{
   picture.src=button.dataset.uvImage;
   picture.alt=button.querySelector('img').alt;
-  caption.textContent=button.dataset.uvCaption;
+  caption.textContent='MastroLabs · Exploración visual '+String(index+1).padStart(2,'0');
   if(typeof modal.showModal==='function')modal.showModal();
   else window.open(button.dataset.uvImage,'_blank','noopener');
  }));
@@ -1009,15 +961,28 @@ header .header-inner.identity-header{
 #contratacion .ct-checklist strong{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#ebc889;font-weight:500}
 #contratacion .ct-note{font-size:11px;line-height:1.8;color:#aab7ca;margin:25px 0 0}
 @media(max-width:650px){#contratacion .ct-wrap{padding:40px 0 50px}#contratacion .ct-columns{grid-template-columns:1fr;gap:36px}#contratacion .ct-intro{font-size:13px}#contratacion h2{font-size:49px}}
+
+#contratacion .ct-contacts{display:grid;grid-template-columns:1fr 1fr;gap:30px;border-top:1px solid #e4bf7842;padding-top:30px}
+#contratacion .ct-person{padding:24px;background:linear-gradient(130deg,#11243b88,#080e1b99);border:1px solid #e4bf7835;min-width:0}
+#contratacion .ct-person h3{margin-bottom:9px}
+#contratacion .ct-person .ct-role{margin-bottom:21px}
+#contratacion .ct-details{margin:0 0 23px;display:grid;gap:9px}
+#contratacion .ct-details a{font-size:13px;line-height:1.7;color:#ecd0a0;text-decoration:none;overflow-wrap:anywhere}
+#contratacion .ct-details a:hover{text-decoration:underline}
+#contratacion .ct-buttons{display:flex;flex-wrap:wrap;gap:10px}
+#contratacion .ct-buttons .btn{padding:11px 16px}
+#contratacion .ct-guidance{margin-top:30px;font-size:12px;line-height:1.85;color:#bfc8d6;max-width:850px}
+@media(max-width:650px){#contratacion .ct-contacts{grid-template-columns:1fr;gap:18px}#contratacion .ct-person{padding:23px 19px}}
 </style>
 <div class="ct-wrap">
  <p class="ct-kicker">Contacto y contratación · Chile 2027</p>
  <h2>Llevemos Superhistórico<br><span>a tu escenario.</span></h2>
  <p class="ct-intro">Para consultas de programación, disponibilidad y contratación de <em>Jesucristo Superhistórico</em>, comunícate con la producción del montaje.</p>
- <div class="ct-columns">
-  <article><p class="ct-kicker">Mastro Pro · Producción</p><h3>Conversemos.</h3><p class="ct-producer">Ítalo Cisternas</p><p class="ct-role">Producción general y musical</p><a class="btn primary" href="https://www.instagram.com/italocisternas/" target="_blank" rel="noopener">Contactar producción ↗</a><span class="ct-channel">Instagram · @italocisternas</span><p class="ct-note">Producción ejecutiva: Hernán Muñoz.</p></article>
-  <article><h3>Cuéntanos tu propuesta.</h3><ul class="ct-checklist"><li><strong>Institución y persona de contacto</strong>Nombre de la organización y medio de respuesta.</li><li><strong>Fecha y ciudad</strong>Fecha tentativa o período de programación.</li><li><strong>Recinto y actividad</strong>Espacio, capacidad aproximada y contexto de la presentación.</li></ul><p class="ct-note">Estos antecedentes permiten iniciar la coordinación artística, técnica y de producción.</p></article>
+ <div class="ct-contacts">
+  <article class="ct-person"><p class="ct-kicker">Producción general y musical</p><h3>Ítalo Cisternas</h3><p class="ct-role">Mastro Pro · Jesucristo Superhistórico</p><div class="ct-details"><a href="mailto:italocisternas@gmail.com">italocisternas@gmail.com</a><a href="tel:+56997028475">+56 9 9702 8475</a></div><div class="ct-buttons"><a class="btn primary" href="https://wa.me/56997028475" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn" href="mailto:italocisternas@gmail.com">Enviar correo</a></div></article>
+  <article class="ct-person"><p class="ct-kicker">Producción ejecutiva</p><h3>Hernán Muñoz</h3><p class="ct-role">Mastro Pro · Jesucristo Superhistórico</p><div class="ct-details"><a href="mailto:contacto.tributosoficiales@gmail.com">contacto.tributosoficiales@gmail.com</a><a href="tel:+56951493763">+56 9 5149 3763</a></div><div class="ct-buttons"><a class="btn primary" href="https://wa.me/56951493763" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn" href="mailto:contacto.tributosoficiales@gmail.com">Enviar correo</a></div></article>
  </div>
+ <p class="ct-guidance">Para iniciar la coordinación, indícanos tu institución, persona de contacto, ciudad, recinto y fecha tentativa de presentación.</p>
 </div>
 <script>
 (() => {
